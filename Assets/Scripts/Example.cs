@@ -5,17 +5,11 @@ using UnityEngine;
 public class Example : MonoBehaviour
 {
 
-    public bool trueOrFalse;
-    public float decimalNumber;
-    private float speed = 100.0f;
-    public string firstName = "Meeshel";
-    public Transform RemainsCylinder;
+    public Rigidbody RemainsCylinder;
 
     // Use this for initialization
     void Start()
     {
-        Debug.Log("Hello world");
-
 
     }
 
@@ -24,8 +18,10 @@ public class Example : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(RemainsCylinder, transform.position, transform.rotation);
             Destroy(gameObject);
+            //Rigidbody clone;
+            //clone = Instantiate(RemainsCylinder, transform.position, transform.rotation) as Rigidbody;
+            //clone.velocity = transform.TransformDirection(Vector3.forward * 10);
         }
     }
 }
